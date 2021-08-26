@@ -28,11 +28,11 @@ def confirm(Debug=True):
 		pass
 def openConsole(Debug=False):
 	if Debug:
-		keyboard.press(Key.ctrl)
-		keyboard.press(Key.alt)
+		keyboard.press(Key.ctrl_l)
+		keyboard.press(Key.alt_l)
 		keyboard.press('c')
-		keyboard.release(Key.ctrl)
-		keyboard.release(Key.alt)
+		keyboard.release(Key.ctrl_l)
+		keyboard.release(Key.alt_l)
 		time.sleep(0.5)
 		EnableCheats = list("testingcheats on")
 		for lets in EnableCheats:
