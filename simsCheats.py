@@ -68,5 +68,20 @@ class sims4Cheats():
 			keyboard.press(lets)
 		confirm()
 
+	def allCheats(self):
+		wait()
+		openConsole()
+		for lets in Cheats.simsCheats_Motherlode():
+			keyboard.press(lets)
+		confirm()
+		for lets in Cheats.simsCheats_moveObjects():
+			keyboard.press(lets)
+		confirm()
+		for lets in Cheats.simsCheats_ignoreReqs():
+			keyboard.press(lets)
+		confirm()
+
+	
+
 Cheat = sims4Cheats()
-Cheat.IgnoreReqs()
+Cheat.allCheats()
