@@ -20,7 +20,7 @@ class simsComs:
 
 
 
-def confirm(Debug=False):
+def confirm(Debug=True):
 	if Debug:
 		keyboard.press(enter)
 		keyboard.release(enter)
@@ -50,10 +50,11 @@ class sims4Cheats():
 	def Money(self):
 		wait()
 		openConsole()
-		for lets in Cheats.simsCheats_Motherlode():
-			keyboard.press(lets)
-		confirm()
-	
+		for i in range(4):
+			for lets in Cheats.simsCheats_Motherlode():
+				keyboard.press(lets)
+			confirm()
+		
 	def MoveObject(self):
 		wait()
 		openConsole()
@@ -71,12 +72,15 @@ class sims4Cheats():
 	def allCheats(self):
 		wait()
 		openConsole()
-		for lets in Cheats.simsCheats_Motherlode():
-			keyboard.press(lets)
-		confirm()
+		for i in range(4):
+			for lets in Cheats.simsCheats_Motherlode():
+				keyboard.press(lets)
+			confirm()
+
 		for lets in Cheats.simsCheats_moveObjects():
 			keyboard.press(lets)
 		confirm()
+
 		for lets in Cheats.simsCheats_ignoreReqs():
 			keyboard.press(lets)
 		confirm()
